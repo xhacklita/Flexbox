@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOAT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- <button onclick = "miFunc()">Haz click</button>  -->       
+
+    <div class="container">
+    
+        <div class="logo">
+            <div class="titulo">
+                <img class="ima" src="mtc.png"></img>
+                <h1 class = "titulo">Soat Manual</h1>
+            </div>
+        </div>        
+        <!-- ************** -->
+        <div class="conte-izq">
+            
+            <select id="compania">
+                <option value="">Seleccione Compañia</option>
+                <option value="Mapfre">Mapfre</option>
+                <option value="Positiva">Positiva</option>
+                <option value="Interseguro">Interseguro</option>
+                <option value="Rimac">Rimac</option>
+                <option value="Paciifico">Paciifico</option>
+                <option value="Protecta">Protecta</option>
+             </select>
+             <div>
+                <label for="Poliza" class="poliza">Poliza</label>
+                <input type="text" class="f-poliza" id="poliza">
+              </div>
+              <div>
+                <label for="Emision" class="emision">Emision</label>
+                <input type="text" class="f-emision" id="emision">
+              </div>
+              <div>
+                <label for="Vencimiento" class="venci">Vencimiento</label>
+                <input type="text" class="f-venci" id="venci">
+              </div>
+              <div>
+                <label for="placa" class="poliza">Placa</label>
+                <input type="text" class="f-placa" id="placa">
+              </div>
+              <div>
+                <label for="nombre" class="poliza">Nombres</label>
+                <input type="text" class="f-nombre" id="nombre">
+              </div>
+              <!-- <div>
+                <label for="categoria" class="poliza">Categoria</label>
+                 <input type="text" class="f-categoria" id="categoria"> -->
+                <label for="opc">Categoria:</label>
+                <select id="categoria">                  
+                  <option value="AUTOMOVIL">AUTOMOVIL</option>
+                  <option value="STA-WAGON">STA-WAGON</option>
+                  <option value="CMT PICKUP">CMT PICKUP</option>
+                  <option value="CMTA RURAL">CMTA RURAL</option>
+                  <option value="CMTA PANEL">CMTA PANEL</option>
+                  <option value="CAMION">CAMION</option>
+               </select>
+              <!-- </div> -->
+              <div>
+                <label for="presio" class="presio">Presio</label>
+                <input type="text" class="f-presio" id="presio">
+              </div>
+              <div>
+                <label for="uso" class="uso">Uso</label>
+                <input type="text" class="f-uso" id="uso">
+              </div>
+              <div>
+                <label for="fecha" class="fecha">Fecha</label>
+                <input type="text" class="f-fecha" id="fecha">
+              </div>
+              <div>
+                <label for="motor" class="poliza">Vin/N°Serie</label>
+                <input type="text" class="f-motor" id="motor">
+              </div>
+              <div>
+                <label for="hora" class="fecha">Hora</label>
+                <input type="text" class="f-hora" id="hora">
+              </div>
+        </div>
+        <!-- ********* -->
+        <div id="conte-der">
+            <img id="image" src="mapfre.jpg" alt="imagen">        
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="botones">            
+            <button onclick = "miFunc()">Haz click</button>
+            <button onclick="modifyPdf()">Modify PDF</button>
+            <button>Actualizar</button>
+        </div>
+        
+        <div class="footer">
+            <H2>FOOTER</H2>
+        </div>
+
+    </div>
+  
+
+
+    <script src="poliza.js"></script>
+</body>
+</html>
